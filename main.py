@@ -244,8 +244,8 @@ def start_server():
         print(f"Missing: {', '.join(missing)}", file=sys.stderr)
         sys.exit(1)
 
-    server = HTTPServer(("localhost", CONFIG["port"]), RequestHandler)
-    print(f"Server running on http://localhost:{CONFIG['port']}")
+    server = HTTPServer(("0.0.0.0", CONFIG["port"]), RequestHandler)
+    print(f"Server running on http://0.0.0.0:{CONFIG['port']}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
