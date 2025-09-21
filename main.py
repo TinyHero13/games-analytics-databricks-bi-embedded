@@ -11,14 +11,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 CONFIG = {
-    "instance_url": os.getenv("INSTANCE_URL"),
-    "dashboard_id": os.getenv("DASHBOARD_ID"),
-    "service_principal_id": os.getenv("SERVICE_PRINCIPAL_ID"),
-    "service_principal_secret": os.getenv("SERVICE_PRINCIPAL_SECRET"),
-    "external_viewer_id": os.getenv("EXTERNAL_VIEWER_ID"),
-    "external_value": os.getenv("EXTERNAL_VALUE"),
-    "workspace_id": os.getenv("WORKSPACE_ID"),
-    "port": int(os.getenv("PORT", 3000)),
+    "instance_url": os.environ("INSTANCE_URL"),
+    "dashboard_id": os.environ("DASHBOARD_ID"),
+    "service_principal_id": os.environ("SERVICE_PRINCIPAL_ID"),
+    "service_principal_secret": os.environ("SERVICE_PRINCIPAL_SECRET"),
+    "external_viewer_id": os.environ("EXTERNAL_VIEWER_ID"),
+    "external_value": os.environ("EXTERNAL_VALUE"),
+    "workspace_id": os.environ("WORKSPACE_ID"),
+    "port": int(os.environ("PORT", 3000)),
 }
 
 basic_auth = base64.b64encode(
